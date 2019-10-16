@@ -1,0 +1,29 @@
+// ======================================
+//  Navigation Styles
+// ======================================
+
+.nav__item {
+    text-align: center;
+    @include nav-spc;
+    & a {
+      @extend %no-dec;
+      &:link {
+        color: $gray;
+      }
+      &:visited {
+        color: $blue;
+      }
+    }
+    &:hover {
+      background-color: $teal;
+      border-radius: 5px;
+      & a {
+        color: $white;
+      }
+    }
+    @include media {
+      display: inline-block;
+      font-size: 1.1rem;
+    }
+  }
+  

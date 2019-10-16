@@ -1,0 +1,48 @@
+// ======================================
+//  Grid Styles
+// ======================================
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+  }
+  
+  .grid__row {
+    @include flexbox;
+    margin: 0 0 2rem;
+  }
+  
+  // @for loop to generate grid_col classes
+  // with conditional for setting background color
+  @for $num from 2 through 12 {
+    .grid__col--#{$num} {
+      @include grid;
+      @if map-has-key($themes, #{$num}) {
+        &.theme__colors {
+          background-color: map-get($themes, #{$num});
+        }
+      }
+    }
+  }
+  
+  // Media query, using @for loop to set
+  // widths of grid system
+  @media ($mw $lg) {
+    @for $col-num from 2 through 12 {
+      .grid__col--#{$col-num} {
+        @include flexbox-lg;
+        flex-grow: get-fg($col-num);
+        width: get-pc($col-num);
+      }
+    }
+    .grid__row {
+      @include flexbox-lg;
+    }
+  }
+  
+  .centered {
+    @include media {
+      flex-grow: 0;
+    }
+  }
+  

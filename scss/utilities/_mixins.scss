@@ -1,0 +1,61 @@
+// ======================================
+//  Mixins
+// ======================================
+
+// Media Queries
+@mixin media {
+    @media ($mw $lg) {
+      @content;
+    }
+  }
+  
+  // Flexbox Settings
+  @mixin flexbox {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+  }
+  
+  @mixin flexbox-lg {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  
+  // Grid System Styles
+  @mixin grid {
+    @include flexbox;
+    color: $gray;
+    border-radius: 4px;
+    padding: .9rem;
+    margin: .25rem;
+  }
+  
+  // Button Styles
+  @mixin button {
+    color: $white;
+    border-radius: 4px;
+    padding: .9rem 2.5rem;
+    margin: .75rem .25rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-align: center;
+    border: none;
+    @include media {
+      padding: .9rem 3rem;
+    }
+  }
+  
+  // Navigation Styles
+  @mixin nav-spc {
+    padding: .9rem 1rem;
+    margin: .75rem .25rem;
+    @include media {
+      margin: 1.5rem .25rem 0;
+    }
+  }
+  
+  // Layout Troubleshooting Styles
+  @mixin red-box {
+    border: 1px solid red;
+  }
+  

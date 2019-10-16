@@ -1,0 +1,21 @@
+// ======================================
+//  Image Styles
+// ======================================
+
+.img--logo {
+    @include flexbox;
+    padding: 1rem 0;
+    margin: 0 auto;
+  }
+  
+  .img--frame {
+    padding: 1rem;
+    border: 1px solid $gray-light;
+    @extend %cntr-slf;
+  }
+  
+  .img--avatar {
+    margin: .5rem;
+    @extend %cntr-slf;
+  }
+  
