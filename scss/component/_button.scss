@@ -1,15 +1,10 @@
-/* ============================================= */
-/*              Buttons                          */
-/* ============================================= */
-
-$buttons: 
+$buttons:
   'default' $color-secondary,
   'error' $color-error,
   'info' $color-info,
   'success' $color-success,
   'warning' $color-warning;
 
-// loop in a map with @each
 @each $name, $color in $buttons {
   .#{$name} {
     background-color: $color;
@@ -40,4 +35,3 @@ $buttons:
       }
     }
 }
-

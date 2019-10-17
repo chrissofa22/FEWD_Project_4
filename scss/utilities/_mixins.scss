@@ -1,11 +1,7 @@
-/* ============================================= */
-/*                 Mixins                        */
-/* ============================================= */
-
 @mixin mq($break) {
-    @if ($break == "medium") {
-        @media (min-width: $brkpoint-m) {
-            @content;
-        }
+  @if ($break == "medium") {
+    @media (min-width: $brkpoint-m) {
+      @content;
     }
+  }
 }
