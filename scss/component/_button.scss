@@ -1,0 +1,43 @@
+/* ============================================= */
+/*              Buttons                          */
+/* ============================================= */
+
+$buttons: 
+  'default' $color-secondary,
+  'error' $color-error,
+  'info' $color-info,
+  'success' $color-success,
+  'warning' $color-warning;
+
+// loop in a map with @each
+@each $name, $color in $buttons {
+  .#{$name} {
+    background-color: $color;
+
+    &:hover {
+      background-color: lighten($color, 15%);
+      transition: 0.2s ease-in;
+    }
+  }
+}
+
+.btn {
+    margin-top: 15px;
+    width: 100%;
+    color: $white;
+    border: none;
+    cursor: pointer;
+    padding: 10px 0;
+    text-transform: uppercase;
+    border-radius: 5px;
+    @include mq (medium) {
+      padding: 10px 30px;
+    }
+
+    & + & {
+      @include mq (medium) {
+        margin-left: 10px;
+      }
+    }
+}
+

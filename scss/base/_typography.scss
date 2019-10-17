@@ -1,49 +1,48 @@
-// ======================================
-//  Typography Styles
-// ======================================
+/* ============================================= */
+/*             Base styles                       */
+/* ============================================= */
 
-.container {
-    font-family: $font-stack;
-    color: $gray;
+* {
+  font-family: $lato-font-stack;
+  color: $dark-grey;
+  box-sizing: border-box;
+}
+
+p {
+  line-height: 1.45em;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* ============================================= */
+/*              Typography                       */
+/* ============================================= */
+
+.headline{
+  &-primary {
+    color: $color-primary;
+    margin-left: 10px;
   }
   
-  .link {
-    @extend %no-dec;
-    color: $blue;
-    font-weight: bold;
+  &-secondary {
+    font-weight: 300;
+    color: $dark-grey;
   }
+}
   
-  .blockquote {
-    font-size: 1.5rem;
-    line-height: 2rem;
-    font-style: italic;
-    padding: 0 1rem;
-    margin: 1.5rem 1.75rem;
-    border-radius: 6px;
-    border-left: 8px solid $teal;
-    @include media {
-      font-size: 1.7rem;
-      line-height: 2.1rem;
-      padding: 0 2rem;
-      margin: 1.6rem 2rem;
-    }
-  }
+.link {
+  color: $color-secondary;
+  font-weight: 700;
+}
   
-  .headline--primary {
-    color: $teal;
-    font-weight: 700;
-    padding: .6rem;
-    margin-left: 2rem;
-  }
-  
-  .headline--secondary {
-    @extend %thin-fnt;
-    color: $gray-light;
-    font-size: 1.1rem;
-    font-weight: 100;
-    margin: 2rem 1rem;
-    @include media {
-      font-size: 1.2rem;
-    }
-  }
-  
+.blockquote {
+  font-size: 1.5em;
+  font-weight: 300;
+  font-style: italic;
+  margin-left: 20px;
+  padding-left: 20px;
+  border-left: 8px solid $color-primary;
+  border-radius: 5px;
+}

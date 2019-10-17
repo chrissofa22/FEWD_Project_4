@@ -1,47 +1,33 @@
-// ======================================
-//  Variables
-// ======================================
+/* ============================================= */
+/*                  Variables                    */
+/* ============================================= */
+
+// Colors
+
+$white: #fff;
+$grey: #ccc;
+$dark-grey: #777;
+
+$color-primary: #58e1c1;
+$color-secondary: #51ddfc;
+
+$color-success: #63cc82;
+$color-error: #e4757a;
+$color-warning: #fd7856;
+$color-info: #927bc1;
+
+$color-col3: #deb2ee;
+$color-col4: #7ee6fd;
+$color-col5: #88d9a0;
+$color-col6: #4da2bb;
+$color-col7: #ec9fa3;
+$color-col8: #fd9f85;
+$color-col11: #51ddfc;
+$color-col12: #80e8d1;
 
 // Fonts
-$font-stack: "Neue Helvetica", Helvetica, sans-serif;
-$heading-stack: "Neue Helvetica Thin", Helvetica, sans-serif;
+$lato-font-stack: 'Lato', sans-serif;
 
 // Breakpoints
-$mw: 'min-width:';
-$lg: 1400px;
+$brkpoint-m: 768px;
 
-// All Colors
-$gray: #808080;
-$gray-light: lighten($gray, 20%);
-$teal: #58e1c1;
-$blue: #5ddffc;
-$blue-dark: #3fabca;
-$white: #fff;
-$berry: #e4757a;
-$berry-light: lighten($berry, 10%);
-$red: #fd7856;
-$red-light: lighten($red, 10%);
-$purple: #927bc1;
-$purple-light: lighten($purple, 20%);
-$green: #63cc82;
-$green-light: lighten($green, 10%);
-
-// Theme Colors
-$themes: (
-    '3': $purple-light,
-    '4': $blue,
-    '5': $green-light,
-    '6': $blue-dark,
-    '7': $berry-light,
-    '8': $red-light,
-   '12': $teal,
-);
-
-// Button Colors
-$btn-colors: (
-  'default': $blue,
-  'success': $green,
-    'error': $berry,
-  'warning': $red,
-     'info': $purple,
-);

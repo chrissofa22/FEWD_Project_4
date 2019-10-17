@@ -1,9 +1,2 @@
-// ======================================
-//  Partial Imports
-// ======================================
-
-@import 'variables',
-        'mixins',
-        'placeholders',
-        'extends',
-        'functions';
+@import 'mixins';
+@import 'variables';

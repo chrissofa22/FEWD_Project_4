@@ -1,21 +1,30 @@
-// ======================================
-//  Image Styles
-// ======================================
+/* ============================================= */
+/*              Images                           */
+/* ============================================= */
 
-.img--logo {
-    @include flexbox;
-    padding: 1rem 0;
-    margin: 0 auto;
+%image {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.img {
+  &-avatar {
+    @extend %image;
+    margin-top: 10px;
+    max-width: 100%; 
+    max-height: 100%;
   }
-  
-  .img--frame {
-    padding: 1rem;
-    border: 1px solid $gray-light;
-    @extend %cntr-slf;
+
+  &-frame {
+    @extend %image;
+    margin-top: 10px;
+    max-width: 100%;
+    padding: 13px;
+    border: 1px solid $grey;
   }
-  
-  .img--avatar {
-    margin: .5rem;
-    @extend %cntr-slf;
+
+  &-logo {
+    @extend %image;
   }
-  
+}

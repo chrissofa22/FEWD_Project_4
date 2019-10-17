@@ -1,48 +1,159 @@
-// ======================================
-//  Grid Styles
-// ======================================
+/* ============================================= */
+/*              Grid System                      */
+/* ============================================= */
 
 .container {
-    width: 90%;
-    margin: 0 auto;
+  padding: 0 10px;
+  @include mq (medium) {
+    max-width: 1400px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
   }
-  
-  .grid__row {
-    @include flexbox;
-    margin: 0 0 2rem;
+}
+
+.row {
+  display: flex;
+  flex-direction: column;
+  padding: 1em 10px;
+  @include mq (medium) {
+    flex-direction: row;
   }
-  
-  // @for loop to generate grid_col classes
-  // with conditional for setting background color
-  @for $num from 2 through 12 {
-    .grid__col--#{$num} {
-      @include grid;
-      @if map-has-key($themes, #{$num}) {
-        &.theme__colors {
-          background-color: map-get($themes, #{$num});
-        }
-      }
+}
+
+.centered {
+  @include mq (medium) {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  }
+}
+
+[class^=col] {
+  margin-top: 10px;
+  flex-basis: 100%;
+  min-height: 25px;
+  padding: 10px;
+  border-radius: 5px;
+  @include mq (medium) {
+    display: flex;
+    justify-content: center;
+    margin-top: 0;
+    align-items: center;
+    + [class^=col] {
+      margin-left: 10px;
     }
   }
-  
-  // Media query, using @for loop to set
-  // widths of grid system
-  @media ($mw $lg) {
-    @for $col-num from 2 through 12 {
-      .grid__col--#{$col-num} {
-        @include flexbox-lg;
-        flex-grow: get-fg($col-num);
-        width: get-pc($col-num);
-      }
-    }
-    .grid__row {
-      @include flexbox-lg;
-    }
+}
+
+.col-1 {
+  @include mq (medium) {
+    flex-basis: 8.33%;
   }
-  
-  .centered {
-    @include media {
-      flex-grow: 0;
-    }
+  &.theme {
+    background-color: $color-info;
   }
-  
+}
+
+.col-2 {
+  @include mq (medium) {
+    flex-basis: 16.67%;
+  }
+  &.theme {
+    background-color: $color-warning;
+  }
+}
+
+.col-3 {
+  @include mq (medium) {
+    flex-basis: 25.00%;
+  }
+  &.theme {
+    background-color: $color-col3;
+  }
+}
+
+.col-4 {
+  @include mq (medium) {
+    flex-basis: 33.33%;
+  }
+  &.theme {
+    background-color: $color-col4;
+  }
+}
+
+.col-5 {
+  @include mq (medium) {
+    flex-basis: 41.67%;
+  }
+  &.theme {
+    background-color: $color-col5;
+  }
+}
+
+.col-6 {
+  @include mq (medium) {
+    flex-basis: 50.00%;
+  }
+  &.theme {
+    background-color: $color-col6;
+  }
+}
+
+.col-7 {
+  @include mq (medium) {
+    flex-basis: 58.33%;
+  }
+  &.theme {
+    background-color: $color-col7;
+  }
+}
+
+.col-8 {
+  @include mq (medium) {
+    flex-basis: 66.67%;
+  }
+  &.theme {
+    background-color: $color-col8;
+  }
+}
+
+.col-9 {
+  @include mq (medium) {
+    flex-basis: 75.00%
+  }
+  &.theme {
+    background-color: $color-error;
+  }
+}
+
+.col-10 {
+  @include mq (medium) {
+    flex-basis: 83.33%;
+  }
+  &.theme {
+    background-color: $color-success;
+  }
+}
+
+.col-11 {
+  @include mq (medium) {
+    flex-basis: 91.67%;
+  }
+  &.theme {
+    background-color: $color-col11;
+  }
+}
+
+.col-12 {
+  @include mq (medium) {
+    flex-basis: 100%;
+  }
+  &.theme {
+    background-color: $color-col12;
+  }
+}
+
+.card {
+  flex-basis: 100%;
+}
